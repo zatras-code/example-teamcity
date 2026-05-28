@@ -35,6 +35,7 @@ object Build : BuildType({
     name = "Build"
 
     artifactRules = "target/*.jar => artifacts"
+    publishArtifacts = PublishMode.SUCCESSFUL
 
     params {
         password("env.nexus.password", "credentialsJSON:0d26f99e-f73f-4acb-b38d-8a17bbf52b06")
